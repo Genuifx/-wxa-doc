@@ -3,34 +3,35 @@ nav: english
 search: english
 ---
 
-wxa是一套完善的微信小程序解决方案，通过Decorator增强小程序能力，基于nodejs工程化小程序开发流程，同时支持Vue单文件开发模式和原生小程序开发模式！此外还提供了一套基于wxa开发UI组件。
+WXA is a complete set of WeChat mini programs solutions.  It enhances mini programs capabilities through Decorator, based on nodejs engineering mini programs development process, supports Vue single file development mode and native mini programs development mode! It also provides a set of UI components based on wxa development.
 
-## 特性
-- [x] Vue单文件开发模式
-- [x] 贴合原生开发
+## Feature
+- [x] Vue pattern
+- [x] Native pattern
 - [x] Npm
 - [x] ES next
-- [x] UI组件库
+- [x] UI components
 - [x] Redux
 - [ ] ...
 
-## 初衷
-小程序自诞生开始，大家对改进其开发流程都有自己的见解，例如组件化方面有[zanui](https://github.com/youzan/zanui-weapp)，[weui](https://github.com/Tencent/weui-wxss/), 框架方面有[wepy](https://github.com/Tencent/wepy)。过去一年，一直在观望wepy，文档和源码都有拜读了，不得不说思路的确很惊艳，几次都想在项目中应用，又被大量issue吓退了，等到wepy相当稳定的时候，结果官方又支持了自定义组件了，于是一直都是使用自己开发部署流程在工作，的确发现有很多改进的地方，写了wxa希望能把自己的一些想法加进去，同时改进一下开发的工作流。
+## Intention
+Since the birth of the mini programs, everyone has their own opinions on improving their development process, such as componentization [zanui](https://github.com/youzan/zanui-weapp)，[weui](https://github.com/Tencent/weui-wxss/), library like[wepy](https://github.com/Tencent/wepy)。
+In the past year, we have been watching the `wepy`. Reading the documentation and the source code. We have to say that the idea is really amazing. We want to apply it to the project several times, but We are also scared by a large number of issues. When wepy is stable, the result The official also supports custom components, so i have been using my own development and deployment for a year. i do found some improvements. Wxa wrote to add some of my own ideas and improve the development workflow.
 
-## 快速开始
-wxa提供了一个方便好用的`cli`工具，使用cli可以快速从github拉取手脚架，快速开始小程序开发
+## Quickstart
+Wxa provides a handy `cli` tool. Using cli can quickly pull the scaffold from github and start small program development quickly.
 
-#### 安装依赖
-1. 检查node依赖（node6+）    
+#### Dependencies
+1. check nodejs（node6+）    
 2. `npm i -g @wxa/cli` 
 
-#### 手脚架项目
+#### scaffold
 1. `wxa create base helloWorld`
 2. `cd helloWorld`
 3. `npm i`
 
-#### 编译项目
+#### build your project
 1. `wxa build --watch`
 
-#### 从微信开发者工具打开
-在微信开发者工具中填入小程序appid，把目录指向`path/to/helloWorld/dist`。然后就可以开始wxa项目开发了！
+#### open with wechat dev tools
+Fill in the mini program's appid in the WeChat developer tool and point the directory to `path/to/helloWorld/dist`. Then you can start wxa project development!

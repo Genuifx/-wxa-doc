@@ -15,5 +15,19 @@
   <script src="https://cdn.jsdelivr.net/npm/docute-evanyou/dist/evanyou.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docute/dist/docute.js"></script>
   <script src="./config.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116900237-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-116900237-1');
+
+  docute.router.afterEach(function (to) {
+    gtag('set', 'page', to.fullPath);
+    gtag('send', 'pageview');
+  });
+</script>
 </body>
 </html>

@@ -12,8 +12,8 @@
 - [x] Promise 化小程序api
 - [x] Eventbus 自定义事件
 - [x] Redux 全局状态管理方案
-- [x] 定义常用的Router方法，api类似`vue-router`
-- [x] 使用ES7新特性Decorator，切面编程，无缝增强
+- [x] Router 路由跳转
+- [x] Decorator，切面编程，无缝增强
 
 ## 用例
 支持在原生的app.js使用，也允许在`.wxa`文件中引入

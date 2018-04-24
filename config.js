@@ -27,7 +27,7 @@ var $config = {
         ]
     },
     plugins: [
-        evanyou(),
+        // evanyou(),
         disqus({
             shortname: 'wxa'
         })

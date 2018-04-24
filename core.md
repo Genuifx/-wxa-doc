@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # wxa-core
 
 [![Build Status](https://travis-ci.org/Genuifx/wxa.svg?branch=master)](https://travis-ci.org/Genuifx/wxa)
@@ -7,13 +11,13 @@
 `@wxa/core`是一个非常小巧的包，用于增强小程序原生的能力。可以单独使用，但是一般推荐配合[`@wxa/cli`](https://github.com/Genuifx/wxa-cli)一起使用，体验更佳：）
 
 ## 特性
-- [x] Mixins
-- [x] Plugins 支持插件机制
-- [x] Promise 化小程序api
-- [x] Eventbus 自定义事件
-- [x] Redux 全局状态管理方案
-- [x] Router 路由跳转
-- [x] Decorator，切面编程，无缝增强
+- Mixins
+- Plugins 支持插件机制
+- Promise 化小程序api
+- Eventbus 自定义事件
+- Redux 全局状态管理方案
+- Router 路由跳转
+- Decorator，切面编程，无缝增强
 
 ## 用例
 支持在原生的app.js使用，也允许在`.wxa`文件中引入

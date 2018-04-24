@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # wxa-cli
 [![NPM version](https://img.shields.io/npm/v/@wxa/cli.svg)](https://www.npmjs.com/package/@wxa/cli)
 
@@ -6,14 +10,14 @@
 ![mind-node](./Wxa.png)
 
 ## 特性
-- [x] Npm支持
-- [x] 原生开发模式
-- [x] Vue单文件开发模式
-- [x] 插件机制
-- [x] 个性化编译器
-- [x] 原生组件支持
-- [x] 第三方原生组件
-- [x] 调用微信开发者工具
+- Npm支持
+- 原生开发模式
+- Vue单文件开发模式
+- 插件机制
+- 个性化编译器
+- 原生组件支持
+- 第三方原生组件
+- 调用微信开发者工具
 
 ## 安装
 使用 `npm` 安装: `npm i -g @wxa/cli`

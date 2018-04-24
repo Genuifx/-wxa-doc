@@ -1,6 +1,7 @@
 ---
 nav: english
 search: english
+sidebar: true
 ---
 
 # wxa-cli
@@ -11,14 +12,14 @@ search: english
 ![mind-node](https://github.com/Genuifx/wxa-cli/blob/master/Wxa.png)
 
 ## Feature
-- [x] Npm resolve
-- [x] Native mini program pattern
-- [x] Vue pattern
-- [x] Mult Plugins
-- [x] Custom compiler
-- [x] Native mini program component
-- [x] Component Npm resolve
-- [x] Wechatwebdevtools control
+- Npm resolve
+- Native mini program pattern
+- Vue pattern
+- Mult Plugins
+- Custom compiler
+- Native mini program component
+- Component Npm resolve
+- Wechatwebdevtools control
 
 ## Installing
 use `npm` for installing wxa.

@@ -1,6 +1,7 @@
 ---
 nav: english
 search: english
+sidebar: true
 ---
 
 # wxa-core
@@ -14,12 +15,12 @@ A tiny library for improving  Wechat Mini programs development.:laughing:
 use [`@wxa/cli`](https://github.com/Genuifx/wxa-cli) for better experiment.:smirk:
 
 ## Feature
-- [x] Mixins
-- [x] Promisify
-- [x] Decorator
-- [x] Router
-- [x] Eventbus
-- [x] Redux
+- Mixins
+- Promisify
+- Decorator
+- Router
+- Eventbus
+- Redux
 
 ## Usage
 ### App

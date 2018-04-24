@@ -35,3 +35,8 @@ var $config = {
 }
 
 docute.init($config)
+// var doc = new Docute({
+//     $config
+// });
+
+// doc.start('#app')

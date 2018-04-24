@@ -1,12 +1,12 @@
-wxa是一套完善的微信小程序解决方案，通过Decorator增强小程序能力，基于nodejs工程化小程序开发流程，同时支持Vue单文件开发模式和原生小程序开发模式！此外还提供了一套基于wxa开发UI组件。
+wxa是一套完善的微信小程序开发解决方案，通过Decorator增强小程序能力，基于nodejs工程化小程序开发流程，同时支持Vue单文件开发模式和原生小程序开发模式！此外还提供了一套基于wxa开发UI组件。
 
 ## 特性
-- [x] Vue单文件开发模式
+- [x] Npm依赖解析
+- [x] ES next语法编译
 - [x] 贴合原生开发
-- [x] Npm
-- [x] ES next
+- [x] Vue单文件开发模式
 - [x] UI组件库
-- [x] Redux
+- [x] Redux状态管理
 - [ ] ...
 
 ## 初衷
@@ -15,25 +15,27 @@ wxa是一套完善的微信小程序解决方案，通过Decorator增强小程�
 ## 快速开始
 wxa提供了一个方便好用的`cli`工具，使用cli可以快速从github拉取手脚架，快速开始小程序开发
 
-#### 安装依赖
+#### 1. 安装依赖
 1. 检查node依赖（node6+）    
 2. `npm i -g @wxa/cli` 
 
-#### 手脚架项目
+#### 2. 使用手脚架创建项目
 1. `wxa create base helloWorld`
 2. `cd helloWorld`
 3. `npm i`
 
-#### 编译项目
+#### 3. 编译项目
 1. `wxa build --watch`
 
-#### 从微信开发者工具打开
+#### 4. 从微信开发者工具打开
 在微信开发者工具中填入小程序appid，把目录指向`path/to/helloWorld/dist`。然后就可以开始wxa项目开发了！
 
 ## 迁移项目到wxa
 原有的小程序项目可不不改动代码的情况下快速迁移到wxa下！只需要稍微加配置，旧的小程序项目一样可以享受`@wxa`提供的便利~
-#### 安装依赖
-1. 安装以下开发依赖
+#### 1. 安装依赖
+- 检查node依赖（node6+）    
+- `npm i -g @wxa/cli` 
+- 安装以下开发依赖
 ```json
     "@wxa/core": "^1.1.6",
     "@wxa/plugin-replace": "^1.0.2",
@@ -48,7 +50,9 @@ wxa提供了一个方便好用的`cli`工具，使用cli可以快速从github拉
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
 ```
-2. 添加`wxa.config.js`到项目目录    
+
+#### 2. 添加配置
+- 添加`wxa.config.js`到项目目录    
 ```javascript
     const path = require('path');
     const UglifyjsPlugin = require('@wxa/plugin-uglifyjs');
@@ -57,15 +61,20 @@ wxa提供了一个方便好用的`cli`工具，使用cli可以快速从github拉
     const env = process.env.NODE_ENV || 'development';
     const envlist = require('./app.config')[env];
     module.exports = {
+        // 指定微信开发者工具的目录，用于从cli调用其接口
         wechatwebdevtools: '/Applications/wechatwebdevtools.app',
+        // 解析配置
         resolve: {
             alias: {
                 '@': path.join(__dirname, 'src'),
             },
         },
+        // 使用到的compiler
         use: ['babel', 'sass', 'stylus'],
+        // compiler的配置，如果需要单独配置compiler，写在这里
         compilers: {
         },
+        // 使用到的plugins
         plugins: [
             new ReplacePlugin({
                 list: envlist,
@@ -76,8 +85,31 @@ wxa提供了一个方便好用的`cli`工具，使用cli可以快速从github拉
         module.exports.plugins.push(new UglifyjsPlugin());
     }
 ```
-#### 编译项目
-1. `wxa build --watch`
+- 添加`.babelrc`文件，可以根据自己开发需要去修改
+```json
+{
+    "sourceMap": false,
+    "presets": [
+        "env"
+    ],
+    "plugins": [
+        "transform-class-properties",
+        "transform-decorators-legacy",
+        "transform-object-rest-spread",
+        "transform-export-extensions"
+    ],
+    "ignore": "node_modules"
+}
+```
 
-#### 从微信开发者工具打开
+#### 3. 编译项目
+使用命令行运行`wxa build --watch`
+
+#### 4. 从微信开发者工具打开
 在微信开发者工具中填入小程序appid，把目录指向`path/to/project/dist`。然后就可以开始wxa项目开发了！
+
+<style>
+    body {
+        font-family: -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, "Microsoft YaHei", Arial, sans-serif;
+    }
+</style>

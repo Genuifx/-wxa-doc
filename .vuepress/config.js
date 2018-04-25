@@ -33,7 +33,7 @@ module.exports = {
                 algolia: {},
                 editLinkText: '在 GitHub 上编辑此页',
                 nav: [
-                    {text: '指南', link: '/guide'},
+                    {text: '指南', link: '/guide/'},
                     {text: 'API', link: '/core'},
                     {text: '命令行工具', link: '/cli'},
                 ],
@@ -51,6 +51,15 @@ module.exports = {
                     {text: 'CLI', link: '/lang/english/cli'},
                 ],
             }
+        },
+        sidebar: {
+            '/guide/': [
+                '',
+                'quickstart',
+                'construction',
+                'develop',
+                'mixin'
+            ]
         },
         evergreen: true
     }

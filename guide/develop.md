@@ -125,6 +125,6 @@ wxa.launchPage(Index);
 :::
 
 可以看到注册`wxa`的小程序页面，我们做了三件事
-1. 使用`@Ppp`装饰器
+1. 使用`@Page`装饰器
 2. 声明一个`Index`页面类
 3. 使用`wxa.launchPage`注册页面类

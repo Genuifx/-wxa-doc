@@ -10,39 +10,29 @@ sidebar: auto
 
 `@wxa/core`是一个非常小巧的包，用于增强小程序原生的能力。可以单独使用，但是一般推荐配合[`@wxa/cli`](https://github.com/Genuifx/wxa-cli)一起使用，体验更佳：）
 
-## 特性
-- Mixins
-- Plugins 支持插件机制
-- Promise 化小程序api
-- Eventbus 自定义事件
-- Redux 全局状态管理方案
-- Router 路由跳转
-- Decorator，切面编程，无缝增强
-
-## Api
 `@wxa/core`提供了下面几个Decorator，开发者可以选择性的引入，或者直接使用预定好的两个Decorator`@App`和`@Page`
 
-### Storage
+## Storage
 storage方法包装了同步的wx.storage方法，提供简单，容易记得api
 
-#### set
+### set
 同步保存数据到storage
 - 调用示例 `this.storage.set(key, data)`
 
-#### get
+### get
 同步的获取数据
 - 调用示例 `let data = this.storage.get(key)`
 
-#### remove
+### remove
 清除指定key的数据
 - 调用示例 `this.storage.remove(key)`
 
-#### clear
+### clear
 清除所有的storage数据
 - 调用示例 `this.storage.clear()`
 
 
-### Wxapi
+## Wxapi
 包装了一层小程序的异步方法，使得开发者可以直接使用promise处理异步问题。
 对于同步的方法，不做任何包装直接返回，示例如下：
 1. navigateToMiniProgram
@@ -54,67 +44,67 @@ this.wxapi.navigateToMiniProgram({params}).then(succ=>{}).catch(fail=>{})
 let value = this.wxapi.getSystemInfoSync();
 ```
 
-### Router
+## Router
 同`vue-router`的api设计，只是包装了一层小程序的跳转方法
 
-#### get
+### get
 获取当前路由信息
 - 示例 `this.router.get()`
 
-#### getAll
+### getAll
 获取当前路由栈，同调用`getCurrentPages()`
 - 示例 `this.router.getAll()`
 
-#### push
+### push
 跳转到新路由页面
 - 示例 `this.router.push(url)`
 
-#### replace
+### replace
 关闭当前页面，打开新的指定页面
 - 示例 `this.router.replace(url)`
 
-#### reLaunch
+### reLaunch
 关闭所有调用栈，重新打开指定页面
 - 示例 `this.router.reLaunch(url)`
 
-#### switch
+### switch
 切换tabar页面
 - 示例 `this.router.switch(url)`
 
-#### go
+### go
 回退页面, key为欲回退页面数
 - 示例 `this.router.go(-1)`
 
-#### goBack
+### goBack
 回退上一个页面，同调用`go(-1)`
 - 示例 `this.router.goBack()`
 
-#### close
+### close
 关闭小程序
 - 示例 `this.router.close()`
 
-### Eventbus
+## Eventbus
 wxa提供了自己实现的自定义事件管理，允许用户跨页面，跨组件的共享信息。
 
-#### on
+### on
 监听一个自定义事件，当事件触发的时候执行回调队列。
 - 示例 `this.eventbus.on('event', handler)`
 
-#### off
+### off
 取消监听一个自定义事件
 - 示例 `this.eventbus.off('event', handler)`
 
-#### emit
+### emit
 触发一个自定义事件
 - 示例 `this.eventbus.emit('event')`
 
-#### clear
+### clear
 清空指定事件回调，或者清空所有事件回调
 - 示例 `this.eventbus.clear()`，注意这么写会清空所有事件
 - 示例 `this.eventbus.clear('event')`
 
 
-## 全局状态管理
+## Redux全局状态管理
 `@wxa`提供了一个[redux](https://github.com/Genuifx/wxa-redux.git)集成小程序方案，方便开发者管理全局应用状态
 
 ### 挂载

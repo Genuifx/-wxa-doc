@@ -58,7 +58,9 @@ module.exports = {
                 'quickstart',
                 'construction',
                 'develop',
-                'mixin'
+                'mixin',
+                'component',
+                'plugin'
             ]
         },
         evergreen: true

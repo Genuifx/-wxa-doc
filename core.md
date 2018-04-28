@@ -44,6 +44,10 @@ this.wxapi.navigateToMiniProgram({params}).then(succ=>{}).catch(fail=>{})
 let value = this.wxapi.getSystemInfoSync();
 ```
 
+::: warning 注意
+wxapi对所有微信api一次promise化。其中不会做promisify的方法有：`create*`方法，`*Sync`方法和`getUpdateManager`方法。
+:::
+
 ## Router
 同`vue-router`的api设计，只是包装了一层小程序的跳转方法
 

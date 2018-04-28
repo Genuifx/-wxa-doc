@@ -60,7 +60,8 @@ module.exports = {
                 'develop',
                 'mixin',
                 'component',
-                'plugin'
+                'plugin',
+                'editor'
             ]
         },
         evergreen: true

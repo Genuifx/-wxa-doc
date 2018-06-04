@@ -120,8 +120,17 @@ wxa.launchPage(Index);
 ::: tip 提示
 @App为Main类自动挂载了`Storage`，`Eventbus`, `Wxapi`, `Router`, `Fetch`以及`Utils`函数
 :::
+
 ::: warning 注意
-`wxa.launchPage`自动为页面打开了分享，如果需要关闭分享需要设置`onShareAppMessage=false`
+1. `@wxa/core`1.4版本开始不会将取消页面的自动分享。（之前的设计的确是很糟糕）
+~~`wxa.launchPage`自动为页面打开了分享，如果需要关闭分享需要设置`onShareAppMessage=false`~~
+
+2. `@wxa/core`为每个page提供了一个私有的`$go`方法，解决微信跳转延迟的引发的多次跳转问题。
+示例：
+```html
+<view bindtap="$go" data-path="/pages/index">去首页</view>
+<view bindtap="$go" data-path="/pages/activity" data-type="replace">跳转活动页</view>
+```
 :::
 
 可以看到注册`wxa`的小程序页面，我们做了三件事

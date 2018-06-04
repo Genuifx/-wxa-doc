@@ -2,7 +2,7 @@
 wxa提供了一个方便好用的`cli`工具，使用cli可以从源站（github或者gitlab之类的）拉取手脚架，快速开始小程序开发
 
 ::: warning 注意
-请注意node.js版本 >= 6
+请注意node.js版本 >= 8
 :::
 
 ## 新建项目
@@ -41,7 +41,7 @@ wxa build --watch
 :::
 
 ::: warning 注意
-请注意node.js版本 >= 6
+请注意node.js版本 >= 8
 :::
 
 ### 1. 安装Cli

@@ -2,7 +2,7 @@
 home: true
 heroImage: /wxa-logo.png
 actionText: Get Started ->
-actionLink: /guide.html
+actionLink: /guide/
 features: 
 - title: 赋能
   details: 使用Decorator增强小程序能力，提高开发效率，优化开发体验
